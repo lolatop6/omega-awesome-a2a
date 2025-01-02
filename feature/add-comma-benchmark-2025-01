@@ -1,0 +1,42 @@
+# COMMA: A Communicative Multimodal Multi-Agent Benchmark
+
+## Overview
+A comprehensive benchmark framework designed to evaluate collaborative performance of multimodal multi-agent systems through language communication, focusing on agent-to-agent and agent-human interactions.
+
+## Original Analysis
+COMMA represents a significant advancement in A2A evaluation by introducing the first comprehensive benchmark that specifically addresses inter-agent communication challenges in multimodal settings. Its findings reveal critical limitations in current state-of-the-art models, particularly in agent-to-agent collaboration scenarios, highlighting the gap between AI capabilities and human-level communication abilities.
+
+## Technical Details
+- Evaluation Categories:
+  * Memory (MR)
+  * Grounding (MG)
+  * Reasoning (MSR)
+  * Reaction (RT)
+- Performance Metrics:
+  * Success rate across conversation turns
+  * Mistake recovery patterns
+  * Human vs AI-only collaboration comparison
+- Implementation Framework:
+  * Supports both open-source and closed-source models
+  * Includes GPT-4 and other state-of-the-art models
+  * Provides standardized evaluation methodology
+
+## Key Findings
+- Models struggle to outperform random agent baseline in pure A2A collaboration
+- Human involvement significantly improves success rates
+- Current models show limited ability to learn from past mistakes
+- Performance varies significantly across different capability categories
+
+## Significance
+1. First benchmark specifically designed for evaluating multimodal agent communication
+2. Reveals crucial gaps in current A2A systems
+3. Provides quantitative framework for measuring agent collaboration effectiveness
+4. Demonstrates the importance of human-in-the-loop approaches
+
+## Resource Links
+- Paper: [Arxiv Link]
+- Code: [GitHub Repository Link]
+- Documentation: [Additional Resources]
+
+## Tags
+#benchmark #multimodal #agent-communication #evaluation-framework #collaborative-ai
