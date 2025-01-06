@@ -1,0 +1,38 @@
+# Foundation Models for Decision Making: MDP Dialogue Framework
+
+## Description
+A comprehensive framework that formalizes AI-to-AI and human-AI dialogue as a Markov Decision Process (MDP), enabling systematic interaction modeling and optimization. The framework bridges foundation models with interactive decision-making, providing mathematical foundations for sophisticated A2A communication protocols.
+
+## Why It's Important
+1. Introduces formal mathematical framework for modeling interactive dialogue between AI systems
+2. Enables quantitative optimization of communication through MDP formalization
+3. Provides practical implementation path for A2A interaction systems
+4. Bridges static foundation models with interactive AI capabilities
+
+## Technical Implementation
+```python
+class DialogueSystem:
+    def __init__(self, agent_pi, environment_E):
+        self.pi = agent_pi    # AI agent
+        self.E = environment_E # Environment/other agent
+        self.conversation_history = []
+        
+    def interact(self, max_turns=H):
+        state = self.E.initial_state()  # e0
+        total_reward = 0
+        
+        for t in range(max_turns):
+            # Agent response
+            action = self.pi.generate_response(state)  # at
+            
+            # Environment/other agent response
+            next_state = self.E.step(state, action)   # et+1
+            
+            # Reward calculation
+            reward = self.calculate_reward(state, action)
+            total_reward += (gamma ** t) * reward
+            
+            state = next_state
+            self.conversation_history.append((state, action, reward))
+            
+        return total_reward
